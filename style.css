@@ -7,19 +7,23 @@
   
   body {
     background: #000000;
+    background-image: url(to_do.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     padding: 30px;
   }
   
-  .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+ .container {
+  background: rgba(255, 255, 255, 0.25); /* 25% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px); /*Optional: adds a nice blur behind the transparent container */
+}
+
   
   h1 {
     text-align: center;
@@ -51,6 +55,11 @@
   button:hover {
     background: #2563eb;
   }
+
+  /* .input-container button:hover {
+  background: #2563eb;
+} */
+
   
   ul {
     list-style: none;
@@ -77,22 +86,25 @@
   }
   
   
-  .edit-btn, .delete-btn {
-    margin-left: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  
-  .edit-btn:hover {
-    color: green;
-  }
-  
-  .delete-btn:hover {
-    color: red;
-  }
+/* Reset background for edit/delete buttons */
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  padding: 10px;
+}
+
+.edit-btn:hover {
+  color: green;
+  background: green;
+}
+
+.delete-btn:hover {
+  color: red;
+  background: red;
+}
   
   .progress-container {
     margin-top: 20px;
